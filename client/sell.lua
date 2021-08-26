@@ -1,6 +1,5 @@
 ESX                           = nil
 
-local cachedBins = {}
 
 Citizen.CreateThread(function ()
     while ESX == nil do
@@ -67,10 +66,6 @@ end)
 
 RegisterNetEvent("esx-fruit:box")
 AddEventHandler("esx-fruit:box",function(source)
-	RequestModel(-459818001)
-	while not HasModelLoaded(-459818001) do
-		Citizen.Wait(100)
-	end
 		RequestAnimDict("anim@heists@box_carry@")
 		while not HasAnimDictLoaded("anim@heists@box_carry@") do
 		Citizen.Wait(1)
