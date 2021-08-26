@@ -29,7 +29,7 @@ ensure rprogress
 
 ensure BOBsFruitSchnapps
 
-Use:
+# Use:
 
 Usable Distillery to make and sell fruit schnapps.
 
