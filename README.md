@@ -2,7 +2,7 @@
 
 ESX Fruit Schnapps
 
-#Preview
+# Preview
 
 https://youtu.be/E5YWrLR3K3M
 
@@ -13,7 +13,7 @@ esx_status
 rprogress
 https://forum.cfx.re/t/release-standalone-rprogress-customisable-radial-progress-bars/1630655
 
-#Install Instructions:
+# Install Instructions:
 
 Extract files
 
