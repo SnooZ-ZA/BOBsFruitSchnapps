@@ -70,18 +70,18 @@ AddEventHandler("esx-fruit:box",function(source)
 		while not HasAnimDictLoaded("anim@heists@box_carry@") do
 		Citizen.Wait(1)
 		end
-		TaskPlayAnim(GetPlayerPed(-1),"anim@heists@box_carry@","idle",1.0, -1.0, -1, 49, 0, 0, 0, 0)
+		TaskPlayAnim(PlayerPedId(),"anim@heists@box_carry@","idle",1.0, -1.0, -1, 49, 0, 0, 0, 0)
 		Citizen.Wait(100)
 		attachModel = GetHashKey('v_ret_ml_beerpat2')
 		boneNumber = 28422
-		SetCurrentPedWeapon(GetPlayerPed(-1), 0xA2719263) 
-		local bone = GetPedBoneIndex(GetPlayerPed(-1), boneNumber)
+		SetCurrentPedWeapon(PlayerPedId(), 0xA2719263) 
+		local bone = GetPedBoneIndex(PlayerPedId(), boneNumber)
 		RequestModel(attachModel)
 			while not HasModelLoaded(attachModel) do
 				Citizen.Wait(100)
 			end
 		attachedProp = CreateObject(attachModel, 1.0, 1.0, 1.0, 1, 1, 0)
-		AttachEntityToEntity(attachedProp, GetPlayerPed(-1), bone, 0.0, -0.10, -0.20, -0.20, 0.90, 0.0, 1, 1, 0, 1, 0, 1)
+		AttachEntityToEntity(attachedProp, PlayerPedId(), bone, 0.0, -0.10, -0.20, -0.20, 0.90, 0.0, 1, 1, 0, 1, 0, 1)
 		Citizen.Wait(3000)							
 		RemoveAnimDict("anim@heists@box_carry@")
 		DeleteEntity(attachedProp)
